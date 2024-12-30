@@ -1,89 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="top"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/p21"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="220dp" />
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        android:text="Tic Tac Toe"
+        android:textSize="48sp"
+        android:layout_gravity="center"
+        android:textStyle="bold" />
 
-    <ImageView
-        android:id="@+id/p11"
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/game_status"
+        android:gravity="center"
+        android:textSize="32sp"
+        android:text="Game not started"
+        android:layout_margin="10dp"
+        android:textStyle="bold"
+        android:letterSpacing="0.04"/>
+
+
+    <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-    <ImageView
-        android:id="@+id/p12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-    <ImageView
-        android:id="@+id/p20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="220dp" />
-
-    <ImageView
-        android:id="@+id/p22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="220dp" />
-
-    <ImageView
-        android:id="@+id/p10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="169dp" />
-
-    <ImageView
-        android:id="@+id/p02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="247dp"
-        tools:layout_editor_absoluteY="118dp" />
-
-    <ImageView
-        android:id="@+id/p00"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="145dp"
-        tools:layout_editor_absoluteY="118dp" />
-
-    <ImageView
-        android:id="@+id/p01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/alert_light_frame"
-        tools:layout_editor_absoluteX="196dp"
-        tools:layout_editor_absoluteY="118dp" />
-
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:columnCount="3">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button1"
+            android:textSize="60sp"
+            android:layout_margin="8dp"
+            android:contentDescription="Button1"
+            android:onClick="boardTap"
+            android:tag="0"/>
     <Button
-        android:id="@+id/play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="play"
-        tools:layout_editor_absoluteX="226dp"
-        tools:layout_editor_absoluteY="653dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:id="@+id/button2"
+        android:textSize="60sp"
+        android:layout_margin="8dp"
+        android:contentDescription="Button2"
+        android:onClick="boardTap"
+        android:tag="0"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:textSize="60sp"
+        android:layout_margin="8dp"
+        android:contentDescription="Button3"
+        android:onClick="boardTap"
+        android:tag="0"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:textSize="60sp"
+        android:layout_margin="8dp"
+        android:contentDescription="Button4"
+        android:onClick="boardTap"
+        android:tag="0"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button5"
+        android:textSize="60sp"
+        android:layout_margin="8dp"
+        android:contentDescription="Button5"
+        android:onClick="boardTap"
+        android:tag="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button6"
+            android:textSize="60sp"
+            android:layout_margin="8dp"
+            android:contentDescription="Button6"
+            android:onClick="boardTap"
+            android:tag="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button7"
+            android:textSize="60sp"
+            android:layout_margin="8dp"
+            android:contentDescription="Button7"
+            android:onClick="boardTap"
+            android:tag="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button8"
+            android:textSize="60sp"
+            android:layout_margin="8dp"
+            android:contentDescription="Button8"
+            android:onClick="boardTap"
+            android:tag="0"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/button9"
+            android:textSize="60sp"
+            android:layout_margin="8dp"
+            android:contentDescription="Button9"
+            android:onClick="boardTap"
+            android:tag="0"/>
+
+    </GridLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:id="@+id/start_button"
+        android:onClick="resetGame"
+        android:text="Rest game"/>
+
+
+
+
+</LinearLayout>
